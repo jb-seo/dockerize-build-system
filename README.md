@@ -16,9 +16,9 @@ $ cd dockerize-build-system
 
 ### 1. Make an image from Dockerfile
 ```
-$ docker build --tag webos-base ubuntu-xenial/
+$ docker build --tag webos-base ubuntu-bionic/
 ```
-It makes an image named ``webos-base`` by ``ubuntu-xenial/Dockerfile``.
+It makes an image named ``webos-base`` by ``ubuntu-bionic/Dockerfile``.
 
 ### 2. Make a container from the image
 ```
@@ -33,7 +33,7 @@ If your distro causes an error of *SELinux* permission, add ``:Z`` flag in the e
 
 To clone ``build-webos``,
 ```
-$ sudo git clone https://github.com/webosce/build-webos.git
+$ sudo git clone https://github.com/webosose/build-webos.git
 ```
 
 **webos** must be able to read/write files in the repository, chown it.

@@ -13,11 +13,14 @@ MAINTAINER JeongBong Seo <lifeofthanks@gmail.com>
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y git sudo vim-common && \
+    apt-get install -y git sudo vim-common lsb-release wget software-properties-common && \
     useradd -m webos && \
     touch /etc/sudoers.d/webos && \
     echo "webos ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/webos && \
     mkdir -p /home/webos/mpoint
+
+RUN wget https://raw.githubusercontent.com/webosose/build-webos/master/scripts/prerequisites.sh
+RUN chmod +x prerequisites.sh && ./prerequisites.sh && rm prerequisites.sh
 
 USER webos
 WORKDIR /home/webos/mpoint
