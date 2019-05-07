@@ -1,10 +1,11 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 # 14.04 - trusty
 # 16.04 - xenial
 # 18.04 - bionic
 # 18.10 - cosmic
 
 MAINTAINER Yi-Soo An <yisooan@gmail.com>
+MAINTAINER JeongBong Seo <lifeofthanks@gmail.com>
 
 # Replace the repo with kakao mirror
 # Consider uncommenting for Korea
